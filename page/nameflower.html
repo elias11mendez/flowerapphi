@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='/css/flower.css'>
+
+    <script src="/js/logica.js"></script>
+    <title>Hiflower</title>
+</head>
+
+<body>
+    <section>
+
+        <div class="flower-position"> 
+            <button class="btn-back" onclick="back()">Atras</button>
+
+            <img class="moving-image" src="/img/flower.png">
+            <h2>QUE TENGAS UN BUEN DIA!</h2>
+            <p id="showname"></p>
+        </div>
+    </section>
+    <script>
+        const setname = localStorage.getItem('name');
+        document.getElementById('showname').innerText = `Hola, ${setname}!❤️`;
+        function back(){
+            window.location.href = '/index.html'
+        }
+    </script>
+</body>
+
+</html>
